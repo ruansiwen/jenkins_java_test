@@ -1,0 +1,73 @@
+server:
+  port: 9999
+  servlet:
+    context-path: /
+spring:
+  application:
+    name: test-springboot-demo
+  mvc:
+    static-path-pattern: /static/**  #静态资源访问前缀为res
+  profiles:
+    active: dev
+  main:
+    allow-circular-references: true
+  datasource:
+#      type: com.alibaba.druid.pool.DruidDataSource
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#      url: jdbc:mysql://8.134.199.1:3306/book?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&useSSL=false
+#      username: boot
+#      password: rgogogo
+      driver-class-name: ${tsd.datasource.driver-class-name}
+      url: jdbc:mysql://${tsd.datasource.host}:${tsd.datasource.port}/${tsd.datasource.database}?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+      username: ${tsd.datasource.username}
+      password: ${tsd.datasource.password}
+  data:
+    redis:
+      host: ${tsd.redis.host}
+      port: ${tsd.redis.port}
+      password: ${tsd.redis.password}
+      database: ${tsd.redis.database}
+      lettuce: # 默认使用的连接池
+        pool:
+          max-active: 32 # 连接池中最大活跃连接数，默认8
+          max-idle: 16 # 连接池中最大空闲数量，默认8
+          min-idle: 8 # 连接池中最小空闲数量，默认0
+          max-wait: 10ms # 当连接池耗尽时，抛出异常之前，连接分配应该阻塞的最大时间，默认-1，表示无线阻塞
+
+# 设置日志级别
+logging:
+  file:
+    name: logs/tsd.log
+  level:
+    com.example: debug
+  pattern:
+    dateformat: HH:mm:ss:SSS
+
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+file:
+  upload:
+    directory: static/images/rrr
+    chunkFile: static/chunkFile
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+    enabled: true
+  api-docs:
+    path: /v3/api-docs
+    enabled: true
+  group-configs:
+    group: platform
+    paths-to-match: /**
+    packages-to-scan: com.license4j.license
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
+

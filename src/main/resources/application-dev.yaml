@@ -1,0 +1,14 @@
+tsd:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#    host: 8.134.199.1
+    host: lifeamovie.cn
+    port: 3306
+    database: test
+    username: boot
+    password: rgogogo
+  redis:
+    host: lifeamovie.cn
+    port: 6379
+    password: 2rsw2q
+    database: 0
