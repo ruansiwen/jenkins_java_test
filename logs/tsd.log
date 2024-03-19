@@ -31,3 +31,12 @@
 23:25:50:958  INFO 11744 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2399 ms
 23:25:54:221  INFO 11744 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path ''
 23:25:54:236  INFO 11744 --- [main] com.example.tsd.TsdApplication           : Started TsdApplication in 6.655 seconds (process running for 7.698)
+15:10:11:217  INFO 17104 --- [main] com.example.tsd.EsayExcelTest            : Starting EsayExcelTest using Java 20.0.1 with PID 17104 (started by admin in C:\Users\admin\Desktop\project\jenkins_java_test)
+15:10:11:219 DEBUG 17104 --- [main] com.example.tsd.EsayExcelTest            : Running with Spring Boot v3.1.5, Spring v6.0.13
+15:10:11:221  INFO 17104 --- [main] com.example.tsd.EsayExcelTest            : The following 1 profile is active: "dev"
+15:10:12:760  INFO 17104 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+15:10:12:765  INFO 17104 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+15:10:12:817  INFO 17104 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 0 Redis repository interfaces.
+15:10:19:878  INFO 17104 --- [main] com.example.tsd.EsayExcelTest            : Started EsayExcelTest in 9.272 seconds (process running for 11.493)
+15:10:21:593  INFO 17104 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.tsd.TsdApplicationTests]: TsdApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:10:21:601  INFO 17104 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.tsd.TsdApplication for test class com.example.tsd.TsdApplicationTests

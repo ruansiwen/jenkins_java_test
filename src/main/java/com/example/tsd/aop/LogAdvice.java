@@ -1,6 +1,7 @@
 package com.example.tsd.aop;
 
 
+
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
@@ -27,7 +28,6 @@ public class LogAdvice {
         String methodName = joinPoint.getSignature().getName();
         String allArgs = Arrays.toString(joinPoint.getArgs());
         // System.out.println("Logger-->前置通知，方法名："+methodName+"，参数："+args);
-
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
         String httpMethod = request.getMethod();
         String remoteAddr = request.getRemoteAddr();

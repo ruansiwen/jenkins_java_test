@@ -10,7 +10,6 @@ import com.example.tsd.pojo.valueConfig.DemoConfig;
 import com.example.tsd.pojo.valueConfig.FileConfig;
 import com.example.tsd.utils.BaseResult;
 import com.example.tsd.utils.FileUtil;
-import com.example.tsd.utils.poi.ExcelUtil;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.HttpServletResponse;
@@ -124,8 +123,6 @@ public class DemoController {
     @Operation(summary = "导入数据")
     public BaseResult importData(MultipartFile file, boolean updateSupport) throws Exception {
 
-        ExcelUtil<User> util = new ExcelUtil<User>(User.class);
-        List<User> userList = util.importExcel(file.getInputStream());
 
         return BaseResult.success(ResultEnum.SUCCESS);
     }

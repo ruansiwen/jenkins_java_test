@@ -13,7 +13,6 @@ import java.util.Date;
 
 @Getter
 @Setter
-@EqualsAndHashCode
 @ToString
 public class DemoData {
     @ExcelProperty(index = 0, value = "序号")
